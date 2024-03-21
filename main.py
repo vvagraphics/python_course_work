@@ -248,3 +248,189 @@
 
 
 # print(f"Each person should pay: ${final_amount}")
+
+
+
+
+# DAY 3
+# CONDITIONAL STATEMENTS
+# If Else, 
+
+# print("Welcome to the rollercoaster!")
+# height = int(input("What is your height in cm? "))
+
+# if height > 120:
+#     print("You can ride the rollercoaster")
+# else:
+#     print("Sorry, you hve to grow taller before you can ride.")
+
+# Comparison Operators
+# >,<,>=,<=
+    
+# EXERCISE
+# Which number do you want to check?
+# number = int(input())
+# number = 8
+# 🚨 Don't change the code above 👆
+
+# Write your code below this line 👇
+# if number % 2 == 0:
+#   print("This is an even number.")
+# else:
+#   print("This is an odd number.")
+
+# Exercise bmi 2.0
+# height = 1.75
+# weight = 80
+# bmi = weight / (height ** 2)
+
+# if bmi < 18.5:
+#   print(f"Your BMI is {bmi}, you are underweight.")
+# elif bmi < 25:
+#   print(f"Your BMI is {bmi}, you have a normal weight.")
+# elif bmi < 30:
+#   print(f"Your BMI is {bmi}, you are slightly overweight.")
+# elif bmi < 35:
+#   print(f"Your BMI is {bmi}, you are obese.")
+# else:
+#   print(f"Your BMI is {bmi}, you are clinically obese.")
+
+# Leap Year Exercise
+# use flow charts to help with if else
+
+# year = 1900
+
+# if year % 4 == 0:
+#   if year % 100 == 0: 
+#     if year % 400 == 0: 
+#       print("Leap year")
+#     else:
+#       print("Not leap year")
+#   else:
+#     print("Leap year")
+# else:
+#   print("Not leap year")
+
+# rollercoaster
+# print("Welcome to the rollercoaster!")
+# height = int(input("What is your height in cm? "))
+# bill = 0
+
+# if height >= 120:
+#   print("You can ride the rollercoaster!")
+#   age = int(input("What is your age? "))
+#   if age < 12:
+#     bill = 5
+#     print("Child tickets are $5.")
+#   elif age <= 18:
+#     bill = 7
+#     print("Youth tickets are $7.")
+#   else:
+#     bill = 12
+#     print("Adult tickets are $12.")
+  
+#   wants_photo = input("Do you want a photo taken? Y or N. ")
+#   if wants_photo == "Y":
+#     bill += 3
+  
+#   print(f"Your final bill is ${bill}")
+
+# else:
+#   print("Sorry, you have to grow taller before you can ride.")
+
+
+# Pizza 
+# print("Thank you for choosing Python Pizza Deliveries!")
+# size = input() # What size pizza do you want? S, M, or L
+# add_pepperoni = input() # Do you want pepperoni? Y or N
+# extra_cheese = input() # Do you want extra cheese? Y or N
+# # 🚨 Don't change the code above 👆
+# # Write your code below this line 👇
+# bill = 0
+# # What size pizza do you want? S, M, or L 
+# if size == "S": 
+#   bill = 15
+#   if add_pepperoni == "Y":
+#     bill += 2
+# elif size == "M":
+#   bill = 20
+#   if add_pepperoni == "Y":
+#     bill += 3
+# elif size == "L":
+#   bill = 25
+#   if add_pepperoni == "Y":
+#     bill += 3
+# # Do you want pepperoni? Y or N
+# # if add_pepperoni == "Y":
+#   # if size == "S":
+#   #   bill += 2
+#   #   else:
+#   #     bill += 3
+# # Do you want extra cheese? Y or N
+# if extra_cheese == "Y":
+#   bill += 1
+# print(f"Your final bill is: ${bill}.")
+
+# Logical operators
+# A and B
+# C or D
+# Not
+
+
+# print("Welcome to the rollercoaster!")
+# height = int(input("What is your height in cm? "))
+# bill = 0
+
+# if height >= 120:
+#   print("You can ride the rollercoaster!")
+#   age = int(input("What is your age? "))
+#   if age < 12:
+#     bill = 5
+#     print("Child tickets are $5.")
+#   elif age <= 18:
+#     bill = 7
+#     print("Youth tickets are $7.")
+#   elif age >= 45 and age <= 55:
+#     print("Everything is going to be ok. Have a free ride on us!")  
+#   else:
+#     bill = 12
+#     print("Adult tickets are $12.")
+  
+#   wants_photo = input("Do you want a photo taken? Y or N. ")
+#   if wants_photo == "Y":
+#     bill += 3
+  
+#   print(f"Your final bill is ${bill}")
+
+# else:
+#   print("Sorry, you have to grow taller before you can ride.")
+
+
+# Love Calc Exer
+print("The Love Calculator is calculating your score...")
+name1 = "Angela Yu" # What is your name?
+name2 = "Jack Bauer" # What is their name?
+# 🚨 Don't change the code above 👆
+# Write your code below this line 👇
+combo = name1 + name2
+combo_lower = combo.lower()
+t = combo_lower.count("t")
+r = combo_lower.count("r")
+u = combo_lower.count("u")
+e = combo_lower.count("e")
+
+l = combo_lower.count("l")
+o = combo_lower.count("o")
+v = combo_lower.count("v")
+e = combo_lower.count("e")
+
+first_digit = t + r + u + e
+last_digit = l + o + v + e
+
+score = int(str(first_digit) + str(last_digit))
+if (score < 10) or (score > 90):
+  print(f"Your score is {score}, you go together like coke and mentos.")
+elif (score >= 40) and (score <= 50):
+  print(f"Your score is {score}, you are alright together.")
+else:
+  print(f"Your score is {score}.")
