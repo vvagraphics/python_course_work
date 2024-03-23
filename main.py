@@ -502,4 +502,233 @@
 # LIST
 # data structure
 
- 
+#  banker roulette
+# import random
+# names = ["Angela", "Ben", "Jenny", "Michael", "Chloe"]
+
+
+# a = random.randint(0, len(names)-1)
+# x= names[a]
+# print(f"{x} is going to buy the meal today!")
+
+
+# exercise treasure map
+# line1 = ["⬜️", "️⬜️", "️⬜️"]
+# line2 = ["⬜️", "⬜️", "️⬜️"]
+# line3 = ["⬜️️", "⬜️️", "⬜️️"]
+# map = [line1, line2, line3]
+# print("Hiding your treasure! X marks the spot.")
+# position = input()  # Where do you want to put the treasure?
+
+# A = [line1[0], line2[0], line3[0]]
+# B = [line1[1], line1[1], line1[1]]
+# C = [line1[2], line2[2], line3[2]]
+
+# # Process the user's input
+# column_letter = position[0].upper()
+# row_number = int(position[1]) - 1
+
+# # Determine the correct list to modify
+# if column_letter == 'A':
+#     map[row_number][0] = 'X'
+# elif column_letter == 'B':
+#     map[row_number][1] = 'X'
+# elif column_letter == 'C':
+#     map[row_number][2] = 'X'
+
+# # Print the updated map 
+# print(f"{line1}\n{line2}\n{line3}")
+
+# Rock, Paper, Scissors
+
+rock = '''
+    _______
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___)
+'''
+
+paper = '''
+    _______
+---'   ____)____
+          ______)
+          _______)
+         _______)
+---.__________)
+'''
+
+scissors = '''
+    _______
+---'   ____)____
+          ______)
+       __________)
+      (____)
+---.__(___)
+'''
+
+#Write your code below this line 👇
+# import random
+# computer_choice = [rock, paper, scissors]
+
+# if computer == rock and player == rock print("It is a draw")
+#     if computer == rock and player == scissors print("You lose")
+# else 
+#     print("You win!")
+
+
+# if computer == paper and player == rock 
+#     if computer == rock and player == scissors 
+# else 
+    
+
+
+# if computer == scissors and player == rock
+#     if computer == rock and player == scissors 
+# else 
+    
+
+# import random
+
+# def get_computer_choice():
+#     choices = ["rock", "paper", "scissors"]
+#     return random.choice(choices)
+
+# def get_player_choice():
+#     while True:  # Get valid input
+#         player_input = input("Choose Rock, Paper, or Scissors: ").lower()
+#         if player_input in ["rock", "paper", "scissors"]:
+#             return player_input
+#         else:
+#             print("Invalid input. Please try again.")
+
+# def determine_winner(computer, player):
+#     if computer == player:
+#         print("It's a draw!")
+#     elif (computer == "rock" and player == "scissors") or \
+#          (computer == "paper" and player == "rock") or \
+#          (computer == "scissors" and player == "paper"):
+#         print("You lose!")
+#     else:
+#         print("You win!")
+
+# # loop
+# while True:
+#     computer_choice = get_computer_choice()
+#     player_choice = get_player_choice()
+#     determine_winner(computer_choice, player_choice)
+
+#     play_again = input("Play again? (y/n): ").lower()
+#     if play_again != 'y':
+#         break
+
+
+import random
+
+# def get_computer_choice():
+#     choices = ["rock", "paper", "scissors"]
+#     return random.choice(choices)
+
+# def get_player_choice():
+#     while True:  # Get valid input
+#         player_input = input("Choose Rock, Paper, or Scissors: ").lower()
+#         if player_input in ["rock", "paper", "scissors"]:
+#             return player_input
+#         else:
+#             print("Invalid input. Please try again.")
+
+# def determine_winner(computer, player):
+#     print("Computer chose:", computer)
+#     print("You chose:", player)
+
+#     if computer == player:
+#         print("It's a draw!")
+#     elif (computer == "rock" and player == "scissors") or \
+#          (computer == "paper" and player == "rock") or \
+#          (computer == "scissors" and player == "paper"):
+#         print("You lose!")
+#     else:
+#         print("You win!")
+
+# # Main game loop
+# while True:
+#     computer_choice = get_computer_choice()
+#     player_choice = get_player_choice()
+#     determine_winner(computer_choice, player_choice)
+
+#     play_again = input("Play again? (y/n): ").lower()
+#     if play_again != 'y':
+#         break
+
+
+
+
+# import random
+
+# rock = '''
+#     _______
+# ---'   ____)
+#        (_____)
+#        (_____)
+#        (____)
+# ---.__(___)
+# '''
+
+# paper = '''
+#     _______
+# ---'   ____)____
+#        _______)
+#        _______)
+#        _______)
+# ---.__________)
+# '''
+
+# scissors = '''
+#     _______
+# ---'   ____)____
+#        _______)
+#        __________)
+#        (____)
+# ---.__(___)
+# '''
+
+# def get_computer_choice():
+#     choices = ["rock", "paper", "scissors"]
+#     return random.choice(choices)
+
+# def get_player_choice():
+#     while True:
+#         player_input = input("Choose Rock, Paper, or Scissors: ").lower()
+#         if player_input in ["rock", "paper", "scissors"]:
+#             return player_input
+#         else:
+#             print("Invalid input. Please try again.")
+
+# def determine_winner(computer_choice, player_choice):
+#     print("Computer chose:")
+#     display_choice(computer_choice)
+#     print("You chose:")
+#     display_choice(player_choice)
+
+#     if computer_choice == player_choice:
+#         print("It's a draw!")
+#     # ... rest of the logic to determine the winner
+
+# def display_choice(choice):
+#     if choice == "rock":
+#         print(rock)
+#     elif choice == "paper":
+#         print(paper)
+#     else:
+#         print(scissors)
+
+# # Main game loop
+# while True:
+#     computer_choice = get_computer_choice()
+#     player_choice = get_player_choice()
+#     determine_winner(computer_choice, player_choice)
+
+#     play_again = input("Play again? (y/n): ").lower()
+#     if play_again != 'y':
+#         break
