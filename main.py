@@ -732,3 +732,79 @@ import random
 #     play_again = input("Play again? (y/n): ").lower()
 #     if play_again != 'y':
 #         break
+
+# Day 5
+# Loops
+
+# Input a Python list of student heights
+# student_heights = input().split()
+# for n in range(0, len(student_heights)):
+#   student_heights[n] = int(student_heights[n])
+# # 🚨 Don't change the code above 👆
+  
+# # Write your code below this row 👇
+# y = 0
+# for x(each loop thru) in student_heights:
+#   y +=(add = to y) (capture)x
+# print(y)
+
+# exercise
+
+# Input a Python list of student heights
+# student_heights = input().split()
+# for n in range(0, len(student_heights)):
+#   student_heights[n] = int(student_heights[n])
+# # 🚨 Don't change the code above 👆
+  
+# # Write your code below this row 👇
+# total_height = 0
+# for height in student_heights:
+#   total_height += height
+# print(f"total height = {total_height}")
+
+# number_of_students = 0
+# for student in student_heights:
+#   number_of_students += 1
+# print(f"number of students = {number_of_students}")
+
+# average = round(total_height / number_of_students)
+# print(f"average height = {average}")
+
+# Even Sum exer
+# target = int(input()) # Enter a number between 0 and 1000
+# # 🚨 Do not change the code above ☝️
+
+# # Write your code here 👇
+
+# even_sum = 0
+# for numba in range(2,target + 1, 2):
+#   even_sum += numba
+# print(even_sum)
+
+# # or
+# e_sum = 0
+# for num in range(1, target + 1):
+#   if num % 2 == 0:
+#     e_sum += num
+# print(e_sum)
+
+# Write your code here 👇
+# for num in range(1, 101):
+#   if num % 3 == 0 and num % 5 != 0:
+#     print ("Fizz")
+#   elif num % 5 == 0 and num % 3 != 0:
+#     print ("Buzz")
+#   elif num % 3 == 0 and num % 5 == 0:
+#     print("FizzBuzz")
+#   else:
+#     print(num)  my solution. have to put fizz buzz first
+
+# for num in range(1, 101):
+#     if num % 3 == 0 and num % 5 == 0:
+#      print("FizzBuzz")
+#     elif num % 3 == 0 and num % 5 != 0:
+#      print ("Fizz")
+#     elif num % 5 == 0 and num % 3 != 0:
+#      print ("Buzz")
+#     else:
+#      print(num)
