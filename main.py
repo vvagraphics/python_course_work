@@ -541,32 +541,32 @@
 
 # Rock, Paper, Scissors
 
-rock = '''
-    _______
----'   ____)
-      (_____)
-      (_____)
-      (____)
----.__(___)
-'''
+# rock = '''
+#     _______
+# ---'   ____)
+#       (_____)
+#       (_____)
+#       (____)
+# ---.__(___)
+# '''
 
-paper = '''
-    _______
----'   ____)____
-          ______)
-          _______)
-         _______)
----.__________)
-'''
+# paper = '''
+#     _______
+# ---'   ____)____
+#           ______)
+#           _______)
+#          _______)
+# ---.__________)
+# '''
 
-scissors = '''
-    _______
----'   ____)____
-          ______)
-       __________)
-      (____)
----.__(___)
-'''
+# scissors = '''
+#     _______
+# ---'   ____)____
+#           ______)
+#        __________)
+#       (____)
+# ---.__(___)
+# '''
 
 #Write your code below this line 👇
 # import random
@@ -624,7 +624,7 @@ scissors = '''
 #         break
 
 
-import random
+# import random
 
 # def get_computer_choice():
 #     choices = ["rock", "paper", "scissors"]
@@ -848,3 +848,42 @@ import random
 
 
 # Day 6
+# loops
+
+# def turn_right():
+#     turn_left()
+#     turn_left()
+#     turn_left()
+    
+# while not at_goal():
+#     if front_is_clear():
+#         move()
+#     elif right_is_clear():
+#         turn_right()
+#         move()
+#     elif front_is_clear():
+#         move()
+#     else:
+#         turn_left()
+
+# Day 7
+# HangMan
+
+#Step 1 
+import random
+
+word_list = ["aardvark", "baboon", "camel"]
+
+#TODO-1 - Randomly choose a word from the word_list and assign it to a variable called chosen_word.
+chosen_word = word_list[random.randint(0,2)]
+print(chosen_word)
+# chosen_word = random.choice(word_list) sollution
+#TODO-2 - Ask the user to guess a letter and assign their answer to a variable called guess. Make guess lowercase.
+guess = input("Guess a letter >>>").lower()
+#TODO-3 - Check if the letter the user guessed (guess) is one of the letters in the chosen_word.
+# for letter in chosen_word: solution
+for letter in chosen_word:
+    if guess in chosen_word:
+        print("right")
+    else:
+        print("wrong")
