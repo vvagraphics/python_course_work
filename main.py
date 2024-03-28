@@ -1035,64 +1035,308 @@
 
 #Step 5
 
-import random
+# import random
 
-#TODO-1: - Update the word list to use the 'word_list' from hangman_words.py
-#Delete this line: word_list = ["ardvark", "baboon", "camel"]
-from hangman_words import word_list
+# #TODO-1: - Update the word list to use the 'word_list' from hangman_words.py
+# #Delete this line: word_list = ["ardvark", "baboon", "camel"]
+# from hangman_words import word_list
 
-chosen_word = random.choice(word_list)
-word_length = len(chosen_word)
+# chosen_word = random.choice(word_list)
+# word_length = len(chosen_word)
 
-end_of_game = False
-lives = 6
+# end_of_game = False
+# lives = 6
 
-#TODO-3: - Import the logo from hangman_art.py and print it at the start of the game.
-from hangman_art import logo
-print(logo)
+# #TODO-3: - Import the logo from hangman_art.py and print it at the start of the game.
+# from hangman_art import logo
+# print(logo)
 
-#Testing code
-print(f'Pssst, the solution is {chosen_word}.')
+# #Testing code
+# print(f'Pssst, the solution is {chosen_word}.')
 
-#Create blanks
-display = []
-for _ in range(word_length):
-    display += "_"
+# #Create blanks
+# display = []
+# for _ in range(word_length):
+#     display += "_"
 
-while not end_of_game:
-    guess = input("Guess a letter: ").lower()
+# while not end_of_game:
+#     guess = input("Guess a letter: ").lower()
 
-    #TODO-4: - If the user has entered a letter they've already guessed, print the letter and let them know.
-    if guess in display:
-        print(f"You've already guessed {guess}")
+#     #TODO-4: - If the user has entered a letter they've already guessed, print the letter and let them know.
+#     if guess in display:
+#         print(f"You've already guessed {guess}")
 
-    #Check guessed letter
-    for position in range(word_length):
-        letter = chosen_word[position]
-        #print(f"Current position: {position}\n Current letter: {letter}\n Guessed letter: {guess}")
-        if letter == guess:
-            display[position] = letter
+#     #Check guessed letter
+#     for position in range(word_length):
+#         letter = chosen_word[position]
+#         #print(f"Current position: {position}\n Current letter: {letter}\n Guessed letter: {guess}")
+#         if letter == guess:
+#             display[position] = letter
 
-    #Check if user is wrong.
-    if guess not in chosen_word:
-        #TODO-5: - If the letter is not in the chosen_word, print out the letter and let them know it's not in the word.
-        print(f"You guessed {guess}, that's not in the word. You lose a life.")
+#     #Check if user is wrong.
+#     if guess not in chosen_word:
+#         #TODO-5: - If the letter is not in the chosen_word, print out the letter and let them know it's not in the word.
+#         print(f"You guessed {guess}, that's not in the word. You lose a life.")
         
-        lives -= 1
-        if lives == 0:
-            end_of_game = True
-            print("You lose.")
+#         lives -= 1
+#         if lives == 0:
+#             end_of_game = True
+#             print("You lose.")
 
-    #Join all the elements in the list and turn it into a String.
-    print(f"{' '.join(display)}")
+#     #Join all the elements in the list and turn it into a String.
+#     print(f"{' '.join(display)}")
 
-    #Check if user has got all letters.
-    if "_" not in display:
-        end_of_game = True
-        print("You win.")
+#     #Check if user has got all letters.
+#     if "_" not in display:
+#         end_of_game = True
+#         print("You win.")
 
-    #TODO-2: - Import the stages from hangman_art.py and make this error go away.
-    from hangman_art import stages
-    print(stages[lives])
+#     #TODO-2: - Import the stages from hangman_art.py and make this error go away.
+#     from hangman_art import stages
+#     print(stages[lives])
 
-    # addition. just show already guessed and letter and solution no art
+#     # addition. just show already guessed and letter and solution no art
+
+
+
+
+
+# DAY 8
+# def greeting (name, location):
+#     print(f"Hello {name}")
+#     print(f"what is it like in {location}")
+
+# greeting("john", "usa")
+# # note always check indentation when debug
+
+
+# # Write your code below this line 👇
+# import math
+# def paint_calc(height, width, cover):
+#   number_of_cans = (height * width) / cover
+#   round_up = math.ceil(number_of_cans)
+#   print(f"You'll need {round_up} cans of paint.")
+
+
+
+# # Write your code above this line 👆
+# # Define a function called paint_calc() so the code below works.   
+
+# # 🚨 Don't change the code below 👇
+# test_h = int(input()) # Height of wall (m)
+# test_w = int(input()) # Width of wall (m)
+# coverage = 5
+# paint_calc(height=test_h, width=test_w, cover=coverage)
+
+# Write your code below this line 👇
+# def prime_checker(number):
+#   if number <= 1:
+#     print("It's not a prime number.")
+#   elif number == 2:
+#     print("It's a prime number.")
+#   else:
+#     for i in range(2, int(number** 0.5)+1):
+#       if number % i == 0:
+#         print("It's not a prime number.")
+#         return
+#     print("It's a prime number.")
+
+
+# # Angela's solution
+# def prime_checker(number):
+#   is_prime = True
+#   for i  in range(2, number):
+#     if number % i == 0:
+#       is_prime = False
+#   if is_prime:
+#     print("It's a prime number.")
+#   elif:
+#     print("It's not a prime number.")
+
+
+# # Write your code above this line 👆
+    
+# #Do NOT change any of the code below👇
+# n = int(input()) # Check this number
+# prime_checker(number=n)
+
+# Final Project
+# alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+
+# # direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
+# # text = input("Type your message:\n").lower()
+# # shift = int(input("Type the shift number:\n"))
+
+# #TODO-1: Create a function called 'encrypt' that takes the 'text' and 'shift' as inputs.
+# def encrypt(text, shift):
+#     #TODO-2: Inside the 'encrypt' function, shift each letter of the 'text' forwards in the alphabet by the shift amount and print the encrypted text.  
+#     #e.g. 
+#     #plain_text = "hello"
+#     #shift = 5
+#     #cipher_text = "mjqqt"
+#     #print output: "The encoded text is mjqqt"
+#     # plain_text = "hello"
+#     for i in range(0, len(alphabet)):
+#       shift = alphabet[i+shift]
+#       cipher_text = f"{text}"
+#       print("The encoded text is {text}")
+    
+    
+
+#     ##HINT: How do you get the index of an item in a list:
+#     #https://stackoverflow.com/questions/176918/finding-the-index-of-an-item-in-a-list
+
+#     ##🐛Bug alert: What happens if you try to encode the word 'civilization'?🐛
+
+# #TODO-3: Call the encrypt function and pass in the user inputs. You should be able to test the code and encrypt a message. 
+# encrypt("hello", 5)
+
+# solution
+# alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+# solution to bug of shifting pass z
+# alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+# # my solution
+# # if new_position >= len(alphabet):
+# #   new_position -= len(alphabet)
+
+# direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
+# text = input("Type your message:\n").lower()
+# shift = int(input("Type the shift number:\n"))
+
+# #TODO-1: Create a function called 'encrypt' that takes the 'text' and 'shift' as inputs.
+# def encrypt(plain_text, shift_amount):
+#   cipher_text = ""
+#   #  cycle thru and store as x
+#   for x in plain_text:
+#       position = alphabet.index(x)
+#       new_position = position + shift_amount
+#       new_letter = alphabet[new_position]
+#       cipher_text += new_letter
+#   print(f"The encoded text is {cipher_text}")
+   
+
+#     #TODO-2: Inside the 'encrypt' function, shift each letter of the 'text' forwards in the alphabet by the shift amount and print the encrypted text.  
+#     #e.g. 
+#     #plain_text = "hello"
+#     #shift = 5
+#     #cipher_text = "mjqqt"
+#     #print output: "The encoded text is mjqqt"
+
+#     ##HINT: How do you get the index of an item in a list:
+#     #https://stackoverflow.com/questions/176918/finding-the-index-of-an-item-in-a-list
+
+#     ##🐛Bug alert: What happens if you try to encode the word 'civilization'?🐛
+
+# # #TODO-3: Call the encrypt function and pass in the user inputs. You should be able to test the code and encrypt a message. 
+# # encrypt(plain_text=text, shift_amount=shift)
+  
+#   # decrypt
+# #TODO-1: Create a different function called 'decrypt' that takes the 'text' and 'shift' as inputs.
+# def decrypt(cipher_text, shift_amount):
+#   plain_text = ""
+#   for letter in cipher_text:
+#     position = alphabet.index(letter)
+#     new_position = position - shift_amount
+#     plain_text += alphabet[new_position]
+#   print(f"The decoded text is {plain_text}")
+
+#   #TODO-2: Inside the 'decrypt' function, shift each letter of the 'text' *backwards* in the alphabet by the shift amount and print the decrypted text.  
+#   #e.g. 
+#   #cipher_text = "mjqqt"
+#   #shift = 5
+#   #plain_text = "hello"
+#   #print output: "The decoded text is hello"
+
+
+# #TODO-3: Check if the user wanted to encrypt or decrypt the message by checking the 'direction' variable. Then call the correct function based on that 'drection' variable. You should be able to test the code to encrypt *AND* decrypt a message.
+# if direction == "encode":
+#   encrypt(plain_text=text, shift_amount=shift)
+# elif direction == "decode":
+#   decrypt(cipher_text=text, shift_amount=shift)
+
+# Combining all to one function
+# alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+# direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
+# text = input("Type your message:\n").lower()
+# shift = int(input("Type the shift number:\n"))
+
+
+# def caesar(start_text, shift_amount, cipher_directions):
+#   end_text = ""
+#   if cipher_directions == "decode":
+#           shift_amount *= -1
+#   for letter in start_text:
+#       position = alphabet.index(letter)
+#       # bug make sure if inside for loop doesnt have bugs
+#       # if cipher_directions == "decode":
+#       #     shift_amount *= -1
+#       new_position = position + (shift_amount)
+#       end_text += alphabet[new_position]
+#   print(f"The {cipher_directions}d text is {end_text}")
+
+# caesar(start_text=text, shift_amount=shift, cipher_directions=direction)
+
+
+
+# Final Final caesar maybe
+# from art import logo
+
+# print(logo)
+# alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+
+# def caesar(start_text, shift_amount, cipher_direction):
+#   end_text = ""
+#   if cipher_direction == "decode":
+#     shift_amount *= -1
+#   for char in start_text:
+#     if char in alphabet:
+#       position = alphabet.index(char)
+#       new_position = position + shift_amount
+#       end_text += alphabet[new_position]
+#     else:
+#       end_text += char
+#     #TODO-3: What happens if the user enters a number/symbol/space?
+#     #Can you fix the code to keep the number/symbol/space when the text is encoded/decoded?
+#     #e.g. start_text = "meet me at 3"
+#     #end_text = "•••• •• •• 3"
+#     position = alphabet.index(char)
+#     new_position = position + shift_amount
+#     end_text += alphabet[new_position]
+    
+#   print(f"Here's the {cipher_direction}d result: {end_text}")
+
+# #TODO-1: Import and print the logo from art.py when the program starts.
+
+# #TODO-4: Can you figure out a way to ask the user if they want to restart the cipher program?
+# #e.g. Type 'yes' if you want to go again. Otherwise type 'no'.
+# #If they type 'yes' then ask them for the direction/text/shift again and call the caesar() function again?
+# #Hint: Try creating a while loop that continues to execute the program if the user types 'yes'. 
+# should_continue = True
+# while should_continue:
+#   direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
+#   text = input("Type your message:\n").lower()
+#   shift = int(input("Type the shift number:\n"))
+
+#   #TODO-2: What if the user enters a shift that is greater than the number of letters in the alphabet?
+#   #Try running the program and entering a shift number of 45.
+#   #Add some code so that the program continues to work even if the user enters a shift number greater than 26. 
+#   #Hint: Think about how you can use the modulus (%).
+#   shift = shift % 26
+#   caesar(start_text=text, shift_amount=shift, cipher_direction=direction)
+#   result = input("Continue type 'yes' otherwise type 'no'. \n")
+#   if result == "no":
+#     should_continue = False
+#     print("Goodbye")
+# input yes > caesar
+# input no = bye
+
+
+
+
+
+
+
+
+
+# Day 9
+# Python Dictionary
